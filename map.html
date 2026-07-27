@@ -243,6 +243,7 @@
     position: sticky;
     top: 88px;
   }
+  .map-list-spacer{ display:none; }
   .leaflet-popup-content-wrapper{
     border-radius: 10px;
     font-family: var(--font-body);
@@ -316,8 +317,9 @@
   @media (max-width: 900px){
     .controls{ position: static; }
     .locations-layout{ grid-template-columns: 1fr; }
-    #map{ height: 260px; position: relative; z-index: 1; order: -1; margin-bottom: 2rem; overflow: hidden; }
-    .results-list{ margin-top: .5rem; max-height:none; overflow: visible; }
+    #map{ height: 260px; position: relative; z-index: 1; order: -1; overflow: hidden; }
+    .map-list-spacer{ display:block; height: 2.5rem; order: -1; }
+    .results-list{ margin-top: 0; max-height:none; overflow: visible; }
   }
 
   /* ============================================
@@ -428,6 +430,7 @@
 
 <div class="locations-layout">
   <div id="map"></div>
+  <div class="map-list-spacer" aria-hidden="true"></div>
   <div class="results-list" id="results-list"></div>
 </div>
 
